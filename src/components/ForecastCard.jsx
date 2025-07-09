@@ -18,4 +18,3 @@ function ForecastCard({ day }) {
 }
 
 export default ForecastCard;
-//
