@@ -111,108 +111,115 @@ function App() {
       padding: '2rem',
       fontFamily: 'Segoe UI, sans-serif'
     }}>
-      <style>
-        {`
-          .app-name {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-          }
+     <style>
+  {`
+    .app-name {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
 
-          .search-bar {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-          }
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
 
-          .search-container {
-            display: flex;
-            gap: 10px;
-          }
+    .search-container {
+      display: flex;
+      gap: 10px;
+    }
 
-          .city-search {
-            flex: 1;
-            padding: 1rem;
-            border-radius: 12px;
-            border: none;
-            font-size: 1.1rem;
-            background-color: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            outline: none;
-            transition: box-shadow 0.3s ease;
-          }
+    .city-search {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 12px;
+      border: none;
+      font-size: 1.1rem;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: black;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
 
-          .city-search::placeholder {
-            color: #ccc;
-          }
+    .city-search::placeholder {
+      color: #ccc;
+    }
 
-          .city-search:focus {
-            box-shadow: 0 0 0 4px rgba(79, 195, 247, 0.5);
-            background-color: rgba(255,255,255,0.25);
-          }
+    .city-search:focus {
+      box-shadow: 0 0 0 4px rgba(79, 195, 247, 0.5);
+      background-color: rgba(255,255,255,0.25);
+    }
 
-          .location-btn {
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            background-color: #2196f3;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-          }
+    .location-btn {
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      background-color: #2196f3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+    }
 
-          .error-message {
-            color: #ff6b6b;
-            text-align: center;
-            margin: 1rem 0;
-            font-weight: bold;
-          }
+    .error-message {
+      color: #ff6b6b;
+      text-align: center;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
 
-          .forecast-scroll {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-          }
+    .forecast-scroll {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
 
-          .weather-img {
-            display: block;
-            margin: 1rem auto;
-            width: 200px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-          }
+    .weather-img {
+      display: block;
+      margin: 1rem auto;
+      width: 200px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
 
-          .weather-img:hover {
-            opacity: 1;
-          }
+    .weather-img:hover {
+      opacity: 1;
+    }
 
-          @media (max-width: 768px) {
-            .app-name {
-              font-size: 1.8rem;
-            }
+    @media only screen and (max-width: 768px) {
+      .search-container {
+        flex-direction: column;
+      }
 
-            .city-search {
-              font-size: 1rem;
-              padding: 0.8rem;
-            }
+      .app-name {
+        font-size: 1.8rem;
+      }
 
-            .location-btn {
-              padding: 0.7rem;
-              font-size: 0.9rem;
-            }
+      .city-search {
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
 
-            .forecast-scroll {
-              grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
+      .location-btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+      }
 
-            .weather-img {
-              width: 150px;
-            }
-          }
-        `}
-      </style>
+      .weather-img {
+        width: 150px;
+      }
+
+      .forecast-scroll {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  `}
+</style>
+
 
       <h1 className="app-name">Weather App 🌤️</h1>
 
