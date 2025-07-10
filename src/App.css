@@ -1,5 +1,5 @@
 /* src/App.css */
-body {
+/* body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
@@ -7,7 +7,7 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   padding: 2rem;
-}
+} */
 
 .app-container {
   max-width: 1200px;
@@ -19,6 +19,7 @@ body {
   backdrop-filter: blur(10px);
   animation: fadeIn 0.5s ease-in-out;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -147,7 +148,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .details {
     flex-direction: column;
   }
