@@ -5,7 +5,7 @@ import WeatherCard from './components/WeatherCard';
 import ForecastCard from './components/ForecastCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown } from '@fortawesome/free-solid-svg-icons';
-import { Oval } from 'react-loader-spinner';
+import { RingLoader } from "react-spinners"
 
 function App() {
   const [input, setInput] = useState('');
@@ -69,7 +69,7 @@ function App() {
           onKeyPress={search}
         />
       </div>
-      {weather.loading && <Oval color="black" height={100} width={100} />}
+      {weather.loading && <RingLoader color="black" height={100} width={100} />}
       {weather.error && (
         <div className="error-message">
           <FontAwesomeIcon icon={faFrown} /> <span> City not found</span>
